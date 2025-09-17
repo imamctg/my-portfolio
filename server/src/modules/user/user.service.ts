@@ -1,5 +1,5 @@
 import User, { USER_ROLES, UserRole } from './user.model'
-import Course from '../course/course.model'
+
 import bcrypt from 'bcryptjs'
 import { uploadToCloudinary } from '../../middlewares/cloudinary'
 
@@ -74,28 +74,6 @@ export const updateUserInfoService = async (
 // ইউজার ডিলিট করা
 export const deleteUserService = async (id: string) => {
   const user = await User.findByIdAndDelete(id)
-  return user
-}
-
-// ইউজারের মধ্যে কোর্স যোগ করা
-export const addCourseToUserService = async (
-  userId: string,
-  courseId: string
-) => {
-  const user = await User.findById(userId)
-  const course = await Course.findById(courseId)
-
-  if (!user || !course) return null
-
-  const alreadyHasCourse = user.purchasedCourses.some(
-    (c) => c.toString() === course._id.toString()
-  )
-
-  if (!alreadyHasCourse) {
-    user.purchasedCourses.push(course._id)
-    await user.save()
-  }
-
   return user
 }
 

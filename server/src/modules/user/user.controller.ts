@@ -4,7 +4,6 @@ import {
   updateUserRoleService,
   updateUserInfoService,
   deleteUserService,
-  addCourseToUserService,
   getUserCoursesService,
   updateInstructorStatusService,
 } from './user.service'
@@ -129,30 +128,6 @@ export const deleteUser = async (
   } catch (error) {
     console.error('Error deleting user:', error)
     res.status(500).json({ message: 'Server error' })
-  }
-}
-
-// ইউজারের মধ্যে কোর্স যোগ করা
-export const addCourseToUser = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
-  try {
-    const { userId, courseId } = req.body
-
-    const user = await addCourseToUserService(userId, courseId)
-
-    if (!user) {
-      res.status(404).json({ message: 'User or Course not found' })
-      return
-    }
-
-    res.status(200).json({ message: 'Course added successfully', user })
-  } catch (error: any) {
-    console.error('Error in addCourseToUser:', error.message || error)
-    res
-      .status(500)
-      .json({ message: 'Internal server error', error: error.message || error })
   }
 }
 

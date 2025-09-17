@@ -1,10 +1,9 @@
 import mongoose, { Schema, Document, Types } from 'mongoose'
-import { ICourse } from '../course/course.model'
 
 export interface IOrder extends Document {
   _id: Types.ObjectId
   userId: Types.ObjectId
-  courseId: Types.ObjectId | ICourse
+  courseId: Types.ObjectId
   paymentType: string
   amount: number
   discountAmount: number

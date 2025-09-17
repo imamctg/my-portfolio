@@ -7,8 +7,6 @@ import fs from 'fs'
 import { verifyCaptcha } from '../../utils/verifyCaptcha'
 import * as crypto from 'crypto'
 import nodemailer from 'nodemailer'
-import { ReferralTracking } from '../referral/referral-tracking.model'
-import { ReferralService } from '../referral/referral.service'
 import mongoose, { Types } from 'mongoose'
 
 export const handleRegister = async (
@@ -85,14 +83,6 @@ export const handleRegister = async (
         ? req.body.referrerId
         : undefined,
     })
-
-    // ✅ Track referral after user creation
-    if (mongoose.Types.ObjectId.isValid(req.body.referrerId)) {
-      await ReferralService.trackSignup(
-        mongoose.Types.ObjectId.createFromHexString(req.body.referrerId),
-        user._id
-      )
-    }
 
     res.status(201).json({
       success: true,

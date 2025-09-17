@@ -22,9 +22,6 @@ export class EarningsService {
       throw new Error('Course not populated')
     }
 
-    const instructor = await User.findById(course.instructor)
-    if (!instructor) throw new Error('Instructor not found')
-
     // Determine student source
     let studentSource: 'affiliate' | 'instructor' | 'platform' = 'platform'
     if (order.referrerId) {
@@ -50,11 +47,9 @@ export class EarningsService {
       )
 
     const earning = new Earnings({
-      instructorId: course.instructor,
       referrerId: order.referrerId,
       orderId: order._id,
-      courseId: course._id,
-      studentSource,
+
       grossAmount: order.amount,
       paymentGatewayFee,
       platformFee,

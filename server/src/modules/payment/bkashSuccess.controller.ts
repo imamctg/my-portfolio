@@ -2,7 +2,7 @@
 
 import { Request, Response } from 'express'
 import { OrderService } from '../order/order.service'
-import Course from '../course/course.model'
+
 import User from '../user/user.model'
 import { Types } from 'mongoose'
 import dotenv from 'dotenv'
@@ -33,16 +33,6 @@ export const bkashSuccess = async (
     if (!updatedOrder) {
       return res.status(404).json({ message: 'Order not found' })
     }
-
-    // Step 2: Add student to course
-    await Course.findByIdAndUpdate(
-      courseId,
-      {
-        $addToSet: { students: userId },
-        $push: { studentsEnrolledAt: new Date() },
-      },
-      { new: true }
-    )
 
     // Step 3: Add course to user
     await User.findByIdAndUpdate(
