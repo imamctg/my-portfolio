@@ -1,0 +1,13 @@
+{
+  "title": "Testimonials",
+  "add": "Add Testimonial",
+  "delete": "Delete",
+  "confirmDelete": "Are you sure you want to delete this testimonial?",
+  "fetchError": "Failed to fetch testimonials",
+  "createError": "Failed to create testimonial",
+  "deleteError": "Failed to delete testimonial",
+  "created": "Testimonial created successfully",
+  "deleted": "Testimonial deleted successfully",
+  "namePlaceholder": "Name",
+  "commentPlaceholder": "Comment"
+}

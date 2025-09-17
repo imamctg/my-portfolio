@@ -1,0 +1,14 @@
+{
+  "home": "Home",
+  "projects": "Projects",
+  "about": "About",
+  "blog": "Blog",
+  "contact": "Contact",
+  "resume": "Resume",
+  "services": "Services",
+  "dashboard": "Dashboard",
+  "login": "Login",
+  "signup": "Sign Up",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode"
+}

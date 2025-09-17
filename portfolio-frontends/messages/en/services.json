@@ -1,0 +1,42 @@
+{
+  "heading": "My Professional Services",
+  "list": {
+    "1": {
+      "title": "Frontend Web Development",
+      "description": "Build modern, responsive, and fast websites using React, Next.js, TailwindCSS, and other cutting-edge frontend technologies."
+    },
+    "2": {
+      "title": "Backend Development / Server Setup",
+      "description": "Design and implement robust backend APIs using Node.js, Express, MongoDB, MySQL, and secure server configurations."
+    },
+    "3": {
+      "title": "Fullstack Project Creation",
+      "description": "End-to-end project development from frontend UI to backend database and deployment, ensuring high performance and scalability."
+    },
+    "4": {
+      "title": "Role-Based Dashboard",
+      "description": "Create dashboards with authentication and role-based access control for admin, instructors, and users."
+    },
+    "5": {
+      "title": "MERN Stack Development",
+      "description": "Expertise in MongoDB, Express, React, Node.js stack to build dynamic, scalable web applications."
+    },
+    "6": {
+      "title": "WordPress Development & Customization",
+      "description": "Create WordPress websites, customize themes, and develop custom themes/plugins as per client requirements."
+    },
+    "7": {
+      "title": "SEO Optimization",
+      "description": "Improve search engine rankings by implementing on-page SEO, meta tags, sitemaps, and performance optimization."
+    },
+    "8": {
+      "title": "Authentication & Security",
+      "description": "Implement secure login, registration, JWT authentication, and data protection measures for your websites."
+    }
+  },
+  "cta": {
+    "title": "Want to Build Something Amazing?",
+    "resume": "📄 View Resume",
+    "hire": "📩 Hire Me"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Student Registration",
+  "subtitle": "Create your free learning account",
+  "success": "Student registration successful!",
+  "nameRequired": "Name is required.",
+  "emailRequired": "Email is required.",
+  "passwordWeak": "Password is too weak.",
+  "passwordMismatch": "Passwords do not match.",
+  "captchaMissing": "Please verify that you are not a robot.",
+  "agreeRequired": "You must agree to the terms and privacy policy.",
+  "terms": "I agree to the",
+  "and": "and",
+  "termsLink": "Terms & Conditions",
+  "privacyLink": "Privacy Policy",
+  "register": "Register",
+  "registering": "Registering..."
+}

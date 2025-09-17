@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "availability": "Available for new projects",
+    "greeting": "Hello, I'm",
+    "name": "Md Imam Hossain",
+    "role": "Full-Stack Web Developer",
+    "description": "I design and build modern, scalable, and user-friendly applications for the web.",
+    "buttonProjects": "View Projects",
+    "buttonContact": "Contact Me",
+    "buttonResume": "Resume"
+  },
+  "skills": {
+    "title": "Skills",
+    "items": {
+      "web": "Web Development",
+      "design": "UI/UX Design",
+      "marketing": "Digital Marketing",
+      "data": "Data Science"
+    }
+  },
+  "services": {
+    "title1": "Professional",
+    "title2": "Services",
+    "subtitle": "What I offer",
+    "description": "Transform your ideas into high-performing digital experiences with comprehensive development solutions tailored to drive business growth.",
+    "view": "View All"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "view": "View Project"
+  },
+  "testimonials": {
+    "title": "What Clients Say"
+  },
+  "cta": {
+    "title": "Ready to Work Together?",
+    "description": "Let’s build something amazing! Contact me today to get started.",
+    "button": "Get in Touch"
+  },
+  "footer": {
+    "rights": "© 2025 Md Imam Hossain. All rights reserved."
+  }
+}

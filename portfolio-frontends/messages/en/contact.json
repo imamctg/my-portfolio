@@ -1,0 +1,17 @@
+{
+  "title": "📬 Get In Touch",
+  "description": "I’d love to hear from you! Fill out the form or contact me directly.",
+  "name": "Your Name",
+  "email": "Your Email",
+  "message": "Message",
+  "messagePlaceholder": "Write your message",
+  "send": "Send Message",
+  "sending": "Sending...",
+  "success": "🎉 Thank you! Your message has been received. I’ll get back to you shortly.",
+  "error": "😞 Something went wrong. Please try again later.",
+  "captchaError": "⚠️ CAPTCHA verification failed. Please confirm you are not a robot.",
+  "contactEmail": "contact@myportfolio.com",
+  "phone": "+880 1234 567890",
+  "address": "Dhaka, Bangladesh",
+  "responseTime": "I usually respond within 24 hours."
+}

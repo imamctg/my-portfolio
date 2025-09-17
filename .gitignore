@@ -1,0 +1,14 @@
+# Global Ignore
+node_modules/
+.env
+.env.local
+.DS_Store
+*.log
+
+# Next.js (client)
+portfolio-frontends/.next/
+portfolio-frontends/out/
+
+# Express (server)
+server/dist/
+server/logs/

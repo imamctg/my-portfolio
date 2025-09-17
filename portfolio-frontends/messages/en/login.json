@@ -1,0 +1,12 @@
+{
+  "title": "Login to Your Account",
+  "loading": "Loading...",
+  "noAccount": "Don't have an account?",
+  "register": "Register",
+  "login": "Login",
+  "emailPlaceholder": "Email",
+  "passwordPlaceholder": "Password",
+  "success": "Login successful!",
+  "error": "Login failed!",
+  "forgotPassword": "Forgot password?"
+}

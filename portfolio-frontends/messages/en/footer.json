@@ -1,0 +1,20 @@
+{
+  "brand": "My Portfolio",
+  "description": "Showcasing my skills, creativity, and professional journey as a developer and designer.",
+  "exploreTitle": "Explore",
+  "projects": "Projects",
+  "skills": "Skills",
+  "about": "About",
+  "contact": "Contact",
+  "services": "Services",
+  "supportTitle": "Resources",
+  "faq": "FAQ",
+  "help": "Support",
+  "terms": "Terms & Conditions",
+  "privacy": "Privacy Policy",
+  "newsletterTitle": "Newsletter",
+  "newsletterDesc": "Get updates about my latest projects and blog posts.",
+  "emailPlaceholder": "Your email",
+  "subscribe": "Subscribe",
+  "copyright": "All rights reserved."
+}

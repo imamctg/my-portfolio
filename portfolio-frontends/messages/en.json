@@ -1,0 +1,31 @@
+{
+  "home": {
+    "hero": {
+      "title": "Hi, I'm John Doe — Web Developer",
+      "description": "I build modern web applications and beautiful interfaces.",
+      "button": "View Projects"
+    },
+    "skills": {
+      "title": "My Skills",
+      "items": {
+        "web": "Web Development",
+        "design": "UI/UX Design",
+        "marketing": "Digital Marketing",
+        "data": "Data Analysis"
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "view": "View Project"
+    },
+    "testimonials": {
+      "title": "What Clients Say"
+    },
+    "cta": {
+      "title": "Want to Work Together?",
+      "description": "Let's create something amazing together.",
+      "button": "Contact Me",
+      "buttonResume": "Resume"
+    }
+  }
+}

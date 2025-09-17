@@ -1,0 +1,18 @@
+{
+  "title": "প্রকল্পসমূহ",
+  "add": "নতুন প্রকল্প যোগ করুন",
+  "edit": "সম্পাদনা",
+  "delete": "মুছুন",
+  "confirmDelete": "আপনি কি প্রকল্পটি মুছতে চান?",
+  "fetchError": "প্রকল্পগুলো আনতে ব্যর্থ হয়েছে",
+  "deleteError": "প্রকল্প মুছতে ব্যর্থ হয়েছে",
+  "deleted": "প্রকল্প সফলভাবে মুছে ফেলা হয়েছে",
+  "createTitle": "নতুন প্রকল্প তৈরি করুন",
+  "updateTitle": "প্রকল্প আপডেট করুন",
+  "submit": "সাবমিট করুন",
+  "namePlaceholder": "প্রকল্পের শিরোনাম",
+  "categoryPlaceholder": "বিভাগ",
+  "linkPlaceholder": "প্রকল্পের লিঙ্ক",
+  "featuredLabel": "বিশেষ প্রকল্প",
+  "thumbnailLabel": "ছবির থাম্বনেইল"
+}

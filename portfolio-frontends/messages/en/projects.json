@@ -1,0 +1,18 @@
+{
+  "title": "Projects",
+  "add": "Add Project",
+  "edit": "Edit",
+  "delete": "Delete",
+  "confirmDelete": "Are you sure you want to delete this project?",
+  "fetchError": "Failed to fetch projects",
+  "deleteError": "Failed to delete project",
+  "deleted": "Project deleted successfully",
+  "createTitle": "Create New Project",
+  "updateTitle": "Update Project",
+  "submit": "Submit",
+  "namePlaceholder": "Project Title",
+  "categoryPlaceholder": "Category",
+  "linkPlaceholder": "Project Link",
+  "featuredLabel": "Featured",
+  "thumbnailLabel": "Thumbnail Image"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Certificate</title>
+    <style>
+      @font-face {
+        font-family: 'Bangla';
+        src: url('https://cdn.jsdelivr.net/gh/muktadir/bangla-web-fonts@main/fonts/SolaimanLipi.ttf')
+          format('truetype');
+      }
+
+      body {
+        font-family: 'Bangla', sans-serif;
+        text-align: center;
+        padding: 50px;
+        background: #f8f9f9;
+        border: 10px solid #2e86c1;
+        height: 100%;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+        color: #2e4053;
+      }
+
+      h2 {
+        font-size: 32px;
+        color: #1f618d;
+      }
+
+      p {
+        font-size: 22px;
+      }
+
+      .footer {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        color: #333;
+        padding: 0 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Certificate of Completion</h1>
+    <h2>{{userName}}</h2>
+    <p>has successfully completed the course</p>
+    <h2>"{{courseTitle}}"</h2>
+
+    <div class="footer">
+      <span>Date: {{date}}</span>
+      <span>Authorized By</span>
+    </div>
+  </body>
+</html>
