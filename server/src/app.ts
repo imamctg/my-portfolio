@@ -10,7 +10,6 @@ import orderRoutes from './modules/order/order.routes'
 
 import contactRoutes from './modules/contact/contact.routes'
 
-import affiliateRoutes from './modules/affiliate/affiliate.routes'
 import withdrawalRoutes from './modules/withdrawals/withdrawal.routes'
 import blogRoutes from './modules/blog/blog.routes'
 import projectRoutes from './modules/project/project.routes'
@@ -55,7 +54,6 @@ app.use('/api/orders', orderRoutes)
 app.use('/api/payment', paymentRoutes)
 app.use('/api/admin', adminRoutes)
 
-app.use('/api/affiliate', affiliateRoutes)
 app.use('/api/withdraw', withdrawalRoutes)
 
 app.use('/api/blogs', blogRoutes)
