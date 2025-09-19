@@ -2,8 +2,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Course Platform',
-  description: 'Buy and sell courses like Udemy',
+  title: 'Md Imam Hossain Portfolio',
+  description: 'Full-Stack Web Developer',
 }
 
 export default function RootLayout({
