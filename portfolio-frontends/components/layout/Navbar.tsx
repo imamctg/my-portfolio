@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import LanguageSwitcher from 'components/common/LanguageSwitcher'
@@ -10,15 +10,45 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
   const t = useTranslations('navbar')
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  // Initial theme
+  useEffect(() => {
+    const saved = localStorage.getItem('theme')
+    if (
+      saved === 'dark' ||
+      (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      setDarkMode(true)
+      document.documentElement.classList.add('dark')
+    }
+  }, [])
 
   // Toggle Dark Mode
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
     } else {
       document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
     }
   }, [darkMode])
+
+  // Close menu on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (
+        menuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(e.target as Node)
+      ) {
+        setMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [menuOpen])
 
   const menuItems = [
     { name: t('home'), href: '/' },
@@ -65,8 +95,8 @@ export default function Navbar() {
 
           <button
             onClick={() => setDarkMode(!darkMode)}
+            aria-label={darkMode ? t('lightMode') : t('darkMode')}
             className='p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition'
-            title={darkMode ? t('lightMode') : t('darkMode')}
           >
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
@@ -77,6 +107,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label='Toggle menu'
           className='md:hidden text-2xl text-teal-600 dark:text-teal-400'
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
@@ -85,7 +116,10 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className='md:hidden px-6 pb-4 space-y-2 text-center bg-white dark:bg-gray-900 shadow transition-colors'>
+        <div
+          ref={menuRef}
+          className='md:hidden px-6 pb-4 space-y-2 text-center bg-white dark:bg-gray-900 shadow transition-colors'
+        >
           {menuItems.map((item) => (
             <Link
               key={item.href}
@@ -96,7 +130,6 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-
           <div className='flex justify-center gap-3 mt-2'>
             <Link
               href='/resume.pdf'
@@ -105,16 +138,15 @@ export default function Navbar() {
             >
               {t('resume')}
             </Link>
-
             <button
               onClick={() => setDarkMode(!darkMode)}
+              aria-label={darkMode ? t('lightMode') : t('darkMode')}
               className='p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition'
             >
               {darkMode ? <FaSun /> : <FaMoon />}
             </button>
           </div>
-
-          <div className='mt-3 border-t border-gray-200 dark:border-gray-700 pt-3'>
+          <div className='mt-3 pt-3 border-t border-gray-200 dark:border-gray-700'>
             <LanguageSwitcher />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import express, { NextFunction, Request, Response } from 'express'
+import express, { NextFunction, Request, response, Response } from 'express'
 import cors from 'cors'
 import authRoutes from './modules/auth/auth.routes'
 
@@ -25,6 +25,7 @@ import helmet from 'helmet'
 
 import { globalErrorHandler } from './middlewares/errorHandler'
 import { sanitizeInput } from './middlewares/sanitize.middleware'
+import axios from 'axios'
 // import { scheduleBonuses } from './schedulers/monthlyBonusJob'
 
 dotenv.config()
@@ -63,6 +64,19 @@ app.use('/api/hero', heroRoutes)
 app.use('/api/skills', skillRoutes)
 app.use('/api/cta', ctaRoutes)
 app.use('/api/services', serviceRoutes)
+
+const url = `https://my-portfolio-1-sysy.onrender.com/`
+const interval = 30000
+function reloadWebsite() {
+  axios
+    .get(url)
+    .then((response) => console.log('Website Reload'))
+
+    .catch((error) => {
+      console.log(`Error: ${error.message}`)
+    })
+}
+setInterval(reloadWebsite, interval)
 
 // 🏠 Default Route
 app.get('/', (req, res) => {

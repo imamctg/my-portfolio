@@ -85,7 +85,7 @@ export default function Homepage() {
       .get(`${baseURL}/cta?locale=${locale}`)
       .then((res) => setCta(res.data))
       .catch((err) => console.error(err))
-  }, [])
+  }, [locale])
 
   const skillIcons: Record<string, JSX.Element> = {
     React: <FaReact className='text-cyan-500' />,
