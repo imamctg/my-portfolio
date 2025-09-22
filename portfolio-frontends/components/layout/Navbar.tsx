@@ -132,7 +132,7 @@ export default function Navbar() {
           ))}
           <div className='flex justify-center gap-3 mt-2'>
             <Link
-              href='/resume.pdf'
+              href='/resume'
               target='_blank'
               className='bg-orange-500 text-white px-4 py-2 rounded-full font-semibold shadow hover:bg-orange-400 transition'
             >
