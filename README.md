@@ -12,7 +12,9 @@ https://my-portfolio-two-ivory.vercel.app/en
 
 ## 🛠️ Technology Stack
 - **Frontend:** Next.js, React, Redux, TypeScript, Tailwind CSS
-- **Deployment:** Vercel
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** JWT
+- **Deployment:** Vercel (frontend), Render (backend)
 
 ## 🔹 Features
 - Home, About, Projects, Contact pages
